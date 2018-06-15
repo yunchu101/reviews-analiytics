@@ -12,6 +12,10 @@ print ('finish reading total are', len(data),'line data')
 sum_len = 0
 for d in data:
 	sum_len = sum_len+len(d)
-print(sum_len)
-print(sum_len/len(data))
+print('average review length',sum_len/len(data))
 
+new = []
+for d in data:
+	if len(d) < 100:
+		new.append(d)
+print('total', len(new),'below 100')
